@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalle Usuario</title>
+  <link rel="stylesheet" href="../css/usuario.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    
+    <span>DETALLE USUARIO</span>
+  </div>
+
+  <button class="btn-outline" onclick="volverAdmin()">VOLVER</button>
+</header>
+<section class="contenedor" id="detalleUsuario"></section>
+
+<section class="contenedor">
+
+  <div class="card">
+
+  <h2 id="nombreUsuario"></h2>
+
+  <div class="grid-datos">
+
+    <p><strong>Correo:</strong> <span id="correo"></span></p>
+    <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+
+    <p><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+    <p><strong>Género:</strong> <span id="genero"></span></p>
+
+    <p><strong>Tipo de documento:</strong> <span id="tipoDoc"></span></p>
+    <p><strong>Número:</strong> <span id="numeroDoc"></span></p>
+
+    <p><strong>Área de estudio:</strong> <span id="estudio"></span></p>
+
+  </div>
+
+  <div class="nivel-box">
+    <p id="nivelTexto"></p>
+    <div class="barra">
+      <div id="barraNivel"></div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<script src="../js/app.js"></script>
+<script>
+  window.onload = function () {
+    cargarDetalleUsuario();
+  };
+</script>
+</body>
+</html>
