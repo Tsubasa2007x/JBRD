@@ -1,0 +1,255 @@
+body {
+    background: url("../imagenes/image.png") center/cover no-repeat;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    
+    position: relative;
+}
+
+body::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+
+.card {
+    position: relative;
+    z-index: 1;
+
+    width: 400px;
+    padding: 25px;
+
+  
+    background: rgba(53, 55, 58, 0.6);
+    border: 1px solid rgba(0, 255, 231, 0.3);
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    
+    box-shadow: 0 0 25px rgba(0, 255, 231, 0.2);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 231, 0.4);
+}
+
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    
+
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 231, 0.3);
+    border-radius: 8px;
+
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #00ffe7;
+    box-shadow: 0 0 10px #00ffe7;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    background: linear-gradient(90deg, #00ffe7, #00bfff);
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ffe7;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-box span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.link {
+    display: block;
+    margin-top: 12px;
+    color: #00ffe7;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #00bfff;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #00ffe7;
+}
+
+.descripcion {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.info {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.info ul {
+    padding-left: 20px;
+}
+
+.info li {
+    margin: 5px 0;
+    color: #aaa;
+}
+#usuario {
+    width: 370px;
+}
+#regUser {
+    width: 370px;
+}
+small {
+    color: white;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: url("../imagenes/ricardo.png") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box-reg1 {
+    width: 380px;
+    padding: 25px;
+
+    background: rgba(0, 20, 40, 0.7);
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(0, 255, 231, 0.3);
+
+    box-shadow: 0 0 25px rgba(0, 255, 231, 0.2);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.box-reg1:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 231, 0.4);
+}
+
+.box-reg1 h2 {
+    color: #00ffe7;
+    margin-bottom: 20px;
+}
+
+.box-reg1 input,
+.box-reg1 select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 231, 0.3);
+    border-radius: 8px;
+
+    color: white;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+.box-reg1 input:focus,
+.box-reg1 select:focus {
+    border: 1px solid #00ffe7;
+    box-shadow: 0 0 10px #00ffe7;
+}
+
+::placeholder {
+    color: #fffdfd;
+}
+.box-reg1 button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    background: linear-gradient(90deg, #00ffe7, #00bfff);
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box-reg1 button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #feffff;
+}
+.box-reg1 {
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 460px;
+}
+#preguntas {
+    width: 440px;
+}
+#tipoid {
+    width: 465px;
+}
+h1{
+    color: white;
+}
+span {
+    color: white;
+}
+.input-error {
+    border: 2px solid #ff4d4d !important;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+.input-ok {
+    border: 2px solid #00c853 !important;
+    box-shadow: 0 0 8px rgba(0, 200, 83, 0.6);
+}

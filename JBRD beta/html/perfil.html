@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil de Usuario</title>
+
+    <link rel="stylesheet" href="../css/perfil.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/app.js" defer></script>
+</head>
+
+<body onload="cargarPerfil()">
+
+<header>
+    <h1>Perfil de Usuario</h1>
+</header>
+
+<section id="perfilUsuario">
+
+    <div class="perfil-container">
+
+        <div class="perfil-izq">
+            <div class="avatar">👤</div>
+            <h2 id="nombreUsuario"></h2>
+        </div>
+        <div class="perfil-der">
+
+            <h2>Editar Datos</h2>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <div class="form-group">
+                <label>Correo</label>
+                <input type="email" id="correo">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" id="telefono">
+            </div>
+
+            <button onclick="guardarPerfil()">
+                Guardar Cambios
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

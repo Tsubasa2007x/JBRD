@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>JBRD Coin - Registro</title>
+
+<link rel="stylesheet" href="../css/estilos.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/app.js"></script>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Registro de Usuario</h2>
+
+<input type="text" id="regUser" placeholder="Usuario">
+
+<div class="password-box">
+<input type="password" id="regPass" placeholder="Contraseña">
+<span onclick="ocultar('regPass')">👁</span>
+</div>
+
+<small>
+Mínimo 6 caracteres, 1 mayúscula, solo letras y números
+</small>
+
+<button onclick="registrar()">Crear cuenta</button>
+
+<a href="login.html" class="link">Volver al login</a>
+
+<p id="mensaje"></p>
+
+</div>
+
+</body>
+</html>

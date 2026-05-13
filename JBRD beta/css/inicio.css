@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #111;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color:rgba(0, 195, 255, 0.808);
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid rgba(0, 195, 255, 0.589);
+    color: rgb(255, 255, 254);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: rgb(255, 255, 254);
+    color: black;
+}
+.hero {
+    height: 400px;
+    background: url("../imagenes/imperio.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    position: relative;
+}
+
+.hero::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 30px 60px;
+    background: #111;
+    border-top: 1px solid #222;
+}
+
+.bienvenida p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.conocenos {
+    display: flex;
+    padding: 60px;
+    gap: 40px;
+    align-items: center;
+}
+
+.conocenos .texto {
+    flex: 1;
+}
+
+.conocenos h2 {
+    color: rgb(247, 246, 242);
+    margin-bottom: 20px;
+}
+
+.conocenos p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.conocenos .imagen {
+    flex: 1;
+    height: 300px;
+    background: url("/imagenes/image.png") center/cover no-repeat;
+    border-radius: 10px;
+}
+.servicios {
+    padding: 80px 40px;
+    background: #0a0a0a;
+    text-align: center;
+    position: relative;
+}
+
+.servicios h2 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.servicio {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgb(253, 253, 253);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.servicio h3 {
+    color: rgb(238, 234, 234);
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.btn-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: auto;
+
+    background: rgb(253, 253, 251);
+    color: black;
+    font-size: 20px;
+
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+
+    transition: 0.5s;
+}
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-name {
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: #111;
+    border: 1px solid #00ffe7;
+    border-radius: 8px;
+    padding: 10px;
+    width: 180px;
+    z-index: 999;
+}
+
+.dropdown p {
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown p:hover {
+    background: #00ffe7;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+.user-btn {
+    margin-left: 10px;
+}
