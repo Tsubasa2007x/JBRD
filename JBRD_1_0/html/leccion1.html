@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>¿Qué es invertir?</title>
+
+<link rel="stylesheet" href="../css/leccion.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+<header class="top-bar">
+
+    <div class="left-menu">
+        <a href="#" class="active">Progreso</a>
+    </div>
+
+    <div class="right-panel">
+
+        <button class="btn-home" onclick="volverInicio()">
+            Inicio
+        </button>
+
+        <div class="user-menu">
+            <button class="user-btn" onclick="toggleMenu()">
+                <span id="usuarioSesion">Usuario</span>
+            </button>
+
+            <div id="dropdown" class="dropdown hidden">
+                <p onclick="mostrarPerfil()">Perfil</p>
+                <p onclick="cerrarSesion()">Cerrar sesión</p>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+<!-- MENU -->
+<aside class="sidebar">
+
+<h3>Ruta de aprendizaje</h3>
+
+<ul>
+<li class="activo">1. ¿Qué es invertir?</li>
+<li class="bloq">2. Riesgo vs Ganancia 🔒</li>
+<li class="bloq">3. Tipos de activos 🔒</li>
+<li class="bloq">4. Estrategias 🔒</li>
+</ul>
+
+</aside>
+
+
+
+<main class="contenido">
+
+<h1>
+1. ¿Qué es invertir?
+</h1>
+
+
+
+<section class="panel">
+
+<h2>Introducción al mundo de las inversiones</h2>
+
+<p>
+Invertir consiste en destinar dinero a un activo o proyecto con el objetivo
+de obtener crecimiento o rentabilidad en el tiempo.
+</p>
+
+<p>
+A diferencia del ahorro tradicional, donde el capital permanece inmóvil,
+la inversión busca poner tu dinero a trabajar para generar valor.
+</p>
+
+<img src="../imagenes/inversion1.jpg" class="img-curso">
+
+<p>
+Los inversionistas buscan aprovechar oportunidades en distintos mercados:
+acciones, bonos, fondos, bienes raíces o activos digitales.
+</p>
+
+</section>
+
+
+
+
+<section class="panel">
+
+<h2>¿Por qué invertir?</h2>
+
+<div class="grid2">
+
+<div class="caja">
+<h3>Vencer la inflación</h3>
+
+<p>
+Si el dinero solo se guarda,
+pierde valor con el tiempo.
+Invertir ayuda a proteger
+tu poder adquisitivo.
+</p>
+</div>
+
+
+<div class="caja">
+<h3>Generar patrimonio</h3>
+
+<p>
+Las inversiones pueden ayudarte
+a construir riqueza y alcanzar metas
+financieras a largo plazo.
+</p>
+</div>
+
+
+<div class="caja">
+<h3>Ingresos pasivos</h3>
+
+<p>
+Algunas inversiones producen ingresos
+sin necesidad de trabajo constante.
+</p>
+</div>
+
+
+<div class="caja">
+<h3>Crecimiento financiero</h3>
+
+<p>
+Permite que el capital crezca
+mediante rendimientos compuestos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="panel">
+
+<h2>Conceptos fundamentales</h2>
+
+<div class="concept-card">
+<h3>Rentabilidad</h3>
+<p>
+Es la ganancia obtenida por una inversión.
+Puede ser fija o variable.
+</p>
+</div>
+
+<div class="concept-card">
+<h3>Riesgo</h3>
+<p>
+Toda inversión tiene riesgo.
+Mayor rendimiento suele implicar mayor exposición.
+</p>
+</div>
+
+<div class="concept-card">
+<h3>Diversificación</h3>
+<p>
+No concentrar todo en un solo activo
+reduce posibles pérdidas.
+</p>
+</div>
+
+<img src="../imagenes/grafico1.jpg"
+class="img-curso">
+
+</section>
+
+
+
+
+
+<section class="panel">
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Si inviertes $1.000.000 con un rendimiento anual del 12%:
+</p>
+
+<div class="ejemplo">
+Año 1 → $1.120.000  
+<br>
+Año 2 → $1.254.400  
+<br>
+Año 3 → $1.404.928
+</div>
+
+<p>
+Este efecto se llama interés compuesto,
+uno de los principios más importantes en inversión.
+</p>
+
+</section>
+
+
+
+
+<section class="panel">
+
+<h2>Errores comunes al empezar</h2>
+
+<ul class="lista">
+<li>Invertir sin conocimiento</li>
+
+<li>Seguir emociones del mercado</li>
+
+<li>No diversificar</li>
+
+<li>Buscar ganancias rápidas</li>
+
+<li>Invertir dinero que no puedes arriesgar</li>
+</ul>
+
+</section>
+
+
+
+
+
+<section class="video-card">
+
+<h2>Video explicativo</h2>
+
+<div class="miniatura"
+onclick="verVideo()">
+
+<img src="../imagenes/video-invertir.jpg">
+
+<div class="play">
+▶
+</div>
+
+</div>
+
+<p>
+Video introductorio sobre fundamentos de inversión.
+</p>
+
+</section>
+
+
+
+<button
+class="quiz-btn"
+onclick="irQuiz()">
+
+QUIZ SIMULACIÓN
+
+</button>
+
+</main>
+
+</div>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>

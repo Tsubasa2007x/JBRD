@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil - JBRD</title>
+
+    <link rel="stylesheet" href="../css/perfil.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/app.js" defer></script>
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="../imagenes/logogris.png" alt="Logo JBRD" id="logol" />
+        <span>JBRD</span>
+    </div>
+
+    <nav>
+        <a href="inicio.html#servicios">Servicios</a>
+        <a href="inicio.html#conocenos">Conócenos</a>
+    </nav>
+
+    <div class="auth-buttons">
+        <button class="btn-outline" onclick="irRegistro()">REGISTRO</button>
+        <button class="btn-outline" onclick="irLogin()">INICIAR</button>
+
+
+        <button class="btn-outline volver-btn" onclick="window.location.href='inicio.html'">
+        
+        </button>
+    </div>
+</header>
+</body>
+<section id="perfilUsuario">
+
+    <div class="perfil-container">
+
+        <!-- IZQUIERDA -->
+        <div class="perfil-izq">
+    <div class="avatar-wrapper" onclick="document.getElementById('inputFoto').click()">
+        <img id="previewImg" class="avatar-img hidden">
+        <span id="textoAvatar">Insertar imagen</span>
+    </div>
+
+    <input type="file" id="inputFoto" accept="image/*" onchange="cargarImagen(event)" hidden>
+
+    <h3 id="nombreUsuario"></h3>
+    <p id="rolUsuario"></p>
+    <p id="experienciaUsuario"></p>
+
+    <div class="progreso-container">
+        <p id="nivelTexto">Nivel 1</p>
+        <div class="barra">
+            <div id="barraProgreso"></div>
+        </div>
+        <p id="areaEstudio" style="font-size: 11px; margin-top: 5px;"></p>
+    </div>
+</div>
+
+        </div>
+        
+        
+        <!-- DERECHA -->
+        <div class="perfil-der">
+
+            <h2>Editar Datos</h2>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <div class="form-group">
+                <label>Correo</label>
+                <input type="email" id="correo">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono</label>
+                <div class="telefono-box">
+                    <select id="codigoPais">
+                        <option value="+57">🇨🇴 +57</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+34">🇪🇸 +34</option>
+                    </select>
+                    <input type="text" id="telefono" placeholder="Número">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Edad</label>
+                <input type="number" id="edad">
+            </div>
+            <div class="form-group">
+                <label>Género</label>
+                <select id="genero">
+                <option value="">Seleccionar</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Ciudad</label>
+                <input type="text" id="ciudad">
+            </div>
+
+            <div class="form-group">
+                <label>Área de estudio</label>
+                <select id="estudio">
+                <option value="">Seleccionar</option>
+                <option value="Simulador de Inversiones">Simulador de Inversiones</option>
+                <option value="Análisis de Mercado">Análisis de Mercado</option>
+                <option value="Formación en Toma de Decisiones">Formación en Toma de Decisiones</option>
+                <option value="Entorno Seguro de Aprendizaje">Entorno Seguro de Aprendizaje</option>
+                <option value="Perfil y Seguimiento Personal">Perfil y Seguimiento Personal</option>
+                </select>
+        </div>
+          <button onclick="guardarPerfil()">Guardar cambios</button>
+          <button onclick="window.location.href='inicio.html'">
+  INICIO
+</button>
+        </div>
+
+    </div>
+
+</section>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
