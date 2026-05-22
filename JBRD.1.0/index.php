@@ -99,44 +99,7 @@ $rol          = $sesionActiva ? htmlspecialchars($_SESSION['nombre_rol'] ?? 'Exp
   </div>
 </section>
  
- <!-- ══════════════════════════════════════
-     MERCADO EN TIEMPO REAL
-══════════════════════════════════════ -->
-<section class="market-section">
-
-  <div class="section-header">
-    <h2>MERCADO EN TIEMPO REAL</h2>
-    <p>Bitcoin y dólar actualizándose en vivo.</p>
-  </div>
-
-  <div class="live-market-grid">
-
-    <!-- BITCOIN -->
-    <div class="chart-box">
-
-      <h3>₿ Bitcoin / USDT</h3>
-
-      <div class="tradingview-widget-container">
-        <div id="btc_chart"></div>
-      </div>
-
-    </div>
-
-    <!-- DOLAR -->
-    <div class="chart-box">
-
-      <h3>💲 Dólar / Peso Colombiano</h3>
-
-      <div class="tradingview-widget-container">
-        <div id="usd_chart"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
+ 
 <!-- ══════════════════════════════════════
      SERVICIOS
 ══════════════════════════════════════ -->
@@ -214,7 +177,6 @@ $rol          = $sesionActiva ? htmlspecialchars($_SESSION['nombre_rol'] ?? 'Exp
     }
   });
 </script>
- <script src="https://s3.tradingview.com/tv.js"></script>
-<script src="js/app.js"></script>
+ 
 </body>
 </html>
