@@ -38,25 +38,140 @@ if (!$leccion) {
     exit();
 }
  
+// =====================================================================
+// PREGUNTAS HARDCODEADAS (ya no se consulta la tabla `preguntas`)
+// Todas pertenecen a id_leccion = 1
+// =====================================================================
+$todasLasPreguntas = [
+    1 => [
+        [
+            'id_pregunta' => 1,
+            'id_leccion' => 1,
+            'pregunta' => '¿Cuál es la principal diferencia entre ahorrar e invertir?',
+            'opcion_a' => 'Ahorrar siempre genera más ganancias que invertir',
+            'opcion_b' => 'Invertir implica asumir un riesgo a cambio de un posible mayor rendimiento, mientras que ahorrar prioriza la seguridad del dinero',
+            'opcion_c' => 'Ahorrar e invertir son sinónimos, no hay diferencia',
+            'opcion_d' => 'Invertir solo se puede hacer con grandes cantidades de dinero',
+            'respuesta_correcta' => 'B',
+            'orden' => 1,
+        ],
+        [
+            'id_pregunta' => 2,
+            'id_leccion' => 1,
+            'pregunta' => '¿Qué significa que el capital "crece" cuando se invierte?',
+            'opcion_a' => 'Que el dinero se multiplica automáticamente sin ningún riesgo',
+            'opcion_b' => 'Que el dinero genera rendimientos adicionales con el tiempo, gracias a intereses o ganancias reinvertidas',
+            'opcion_c' => 'Que el banco regala dinero extra por mantener una cuenta de ahorros',
+            'opcion_d' => 'Que el valor del dinero siempre se mantiene igual',
+            'respuesta_correcta' => 'B',
+            'orden' => 2,
+        ],
+        [
+            'id_pregunta' => 3,
+            'id_leccion' => 1,
+            'pregunta' => 'Si guardas tu dinero en una alcancía durante 10 años sin moverlo, ¿qué le pasa a su valor real frente a la inflación?',
+            'opcion_a' => 'Aumenta porque el dinero gana intereses solo',
+            'opcion_b' => 'Se mantiene exactamente igual',
+            'opcion_c' => 'Generalmente pierde poder de compra debido a la inflación',
+            'opcion_d' => 'Se duplica automáticamente',
+            'respuesta_correcta' => 'C',
+            'orden' => 3,
+        ],
+        [
+            'id_pregunta' => 4,
+            'id_leccion' => 1,
+            'pregunta' => '¿Cuál de las siguientes NO es una alternativa de inversión mencionada en la lección?',
+            'opcion_a' => 'Acciones',
+            'opcion_b' => 'Bonos',
+            'opcion_c' => 'Bienes raíces',
+            'opcion_d' => 'Lotería',
+            'respuesta_correcta' => 'D',
+            'orden' => 4,
+        ],
+        [
+            'id_pregunta' => 5,
+            'id_leccion' => 1,
+            'pregunta' => 'Las acciones representan...',
+            'opcion_a' => 'Un préstamo que le haces a una empresa',
+            'opcion_b' => 'Una parte de la propiedad de una empresa',
+            'opcion_c' => 'Una moneda digital descentralizada',
+            'opcion_d' => 'Un terreno o propiedad física',
+            'respuesta_correcta' => 'B',
+            'orden' => 5,
+        ],
+        [
+            'id_pregunta' => 6,
+            'id_leccion' => 1,
+            'pregunta' => '¿Qué son los bonos en el contexto de inversión?',
+            'opcion_a' => 'Acciones de una empresa tecnológica',
+            'opcion_b' => 'Instrumentos de deuda mediante los cuales el inversionista presta dinero a cambio de intereses',
+            'opcion_c' => 'Una forma de criptomoneda',
+            'opcion_d' => 'Bienes raíces fraccionados',
+            'respuesta_correcta' => 'B',
+            'orden' => 6,
+        ],
+        [
+            'id_pregunta' => 7,
+            'id_leccion' => 1,
+            'pregunta' => 'Las criptomonedas se caracterizan principalmente por...',
+            'opcion_a' => 'Ser inversiones completamente seguras y sin riesgo',
+            'opcion_b' => 'Estar respaldadas directamente por el gobierno colombiano',
+            'opcion_c' => 'Ser activos digitales descentralizados con alta volatilidad',
+            'opcion_d' => 'Garantizar siempre ganancias a corto plazo',
+            'respuesta_correcta' => 'C',
+            'orden' => 7,
+        ],
+        [
+            'id_pregunta' => 8,
+            'id_leccion' => 1,
+            'pregunta' => 'En general, ¿cómo es la relación entre riesgo y ganancia potencial en una inversión?',
+            'opcion_a' => 'A menor riesgo, mayor ganancia potencial',
+            'opcion_b' => 'El riesgo y la ganancia potencial no tienen relación',
+            'opcion_c' => 'A mayor riesgo asumido, mayor es la ganancia potencial (pero también la posible pérdida)',
+            'opcion_d' => 'El riesgo solo afecta las inversiones en bienes raíces',
+            'respuesta_correcta' => 'C',
+            'orden' => 8,
+        ],
+        [
+            'id_pregunta' => 9,
+            'id_leccion' => 1,
+            'pregunta' => '¿Cuál de estas inversiones se considera generalmente de menor riesgo?',
+            'opcion_a' => 'Criptomonedas',
+            'opcion_b' => 'Acciones de empresas nuevas',
+            'opcion_c' => 'Bonos del gobierno',
+            'opcion_d' => 'Bienes raíces en zonas inestables',
+            'respuesta_correcta' => 'C',
+            'orden' => 9,
+        ],
+        [
+            'id_pregunta' => 10,
+            'id_leccion' => 1,
+            'pregunta' => 'Si una persona busca seguridad y no quiere arriesgar su dinero, ¿qué estrategia debería seguir?',
+            'opcion_a' => 'Invertir todo en criptomonedas para maximizar ganancias rápidas',
+            'opcion_b' => 'Optar por alternativas de bajo riesgo, como ahorrar o invertir en instrumentos más estables (bonos)',
+            'opcion_c' => 'Invertir todo en acciones de empresas emergentes',
+            'opcion_d' => 'No importa la estrategia, el riesgo es igual en todas las inversiones',
+            'respuesta_correcta' => 'B',
+            'orden' => 10,
+        ],
+    ],
+    // Si agregas más lecciones con preguntas hardcodeadas, ponlas aquí
+    // bajo la clave correspondiente a su id_leccion.
+];
+ 
+// Preguntas de la lección solicitada (ya ordenadas por 'orden')
+$preguntas = $todasLasPreguntas[$id_leccion] ?? [];
+ 
 // Si el request es AJAX (fetch), devolver preguntas en JSON
 if (
     isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest'
     || (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)
     || isset($_GET['json'])
 ) {
-    $stmtP = $pdo->prepare("SELECT * FROM preguntas WHERE id_leccion = :id_leccion ORDER BY id_pregunta ASC");
-    $stmtP->execute(['id_leccion' => $id_leccion]);
-    $preguntas = $stmtP->fetchAll(PDO::FETCH_ASSOC);
- 
     header('Content-Type: application/json');
     echo json_encode($preguntas);
     exit();
 }
- 
-// Vista HTML del examen
-$stmtP = $pdo->prepare("SELECT * FROM preguntas WHERE id_leccion = :id_leccion ORDER BY id_pregunta ASC");
-$stmtP->execute(['id_leccion' => $id_leccion]);
-$preguntas = $stmtP->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es">
